@@ -1,0 +1,29 @@
+/* SOLMARA — HUD and menus. Sun-soaked: warm cream, hot pink, gold. */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: #101820; font-family: 'Segoe UI', system-ui, sans-serif; }
+#game { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+
+#hud { position: fixed; inset: 0; pointer-events: none; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.8); z-index: 5; }
+#top-left { position: absolute; top: 16px; left: 18px; }
+#money { font-size: 30px; font-weight: 800; color: #7dff9a; }
+#debt { font-size: 16px; font-weight: 600; color: #ffb3b3; margin-top: 2px; }
+#health-bar { width: 220px; height: 12px; background: rgba(0,0,0,0.55); border: 1px solid rgba(255,255,255,0.6); border-radius: 6px; margin-top: 8px; overflow: hidden; }
+#health-fill { height: 100%; width: 100%; background: #58c96b; transition: width 0.2s; }
+#top-right { position: absolute; top: 16px; right: 18px; text-align: right; }
+#stars { font-size: 30px; letter-spacing: 4px; }
+#district { font-size: 16px; font-weight: 600; color: #ffe9a8; }
+#bottom-left { position: absolute; bottom: 18px; left: 18px; max-width: 520px; }
+#speed { font-size: 22px; font-weight: 700; }
+#objective { font-size: 16px; margin-top: 4px; color: #ffe9a8; }
+#timer { font-size: 20px; font-weight: 700; color: #ffd24a; margin-top: 4px; }
+#minimap { position: absolute; bottom: 18px; right: 18px; width: 200px; height: 200px; border-radius: 50%; border: 3px solid rgba(255,255,255,0.85); background: #1c2733; }
+#toast { position: absolute; top: 22%; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.72); padding: 12px 22px; border-radius: 10px; font-size: 18px; max-width: 640px; text-align: center; border: 1px solid rgba(255,210,74,0.7); }
+
+.screen { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(160deg, rgba(20,16,40,0.82), rgba(120,30,70,0.72)); color: #fff; z-index: 10; text-align: center; }
+.screen h1 { font-size: 84px; letter-spacing: 14px; font-weight: 900; color: #ffd24a; text-shadow: 0 4px 0 #c22e6e, 0 8px 24px rgba(0,0,0,0.6); }
+.screen .tagline { font-size: 22px; letter-spacing: 6px; text-transform: uppercase; color: #ffb3d1; margin-top: 6px; }
+.screen .story { font-size: 19px; line-height: 1.6; margin: 26px 0; color: #fff2cc; }
+.screen button { pointer-events: auto; cursor: pointer; font-size: 20px; font-weight: 700; padding: 14px 42px; margin: 6px; border-radius: 10px; border: none; background: #ffd24a; color: #2a1608; box-shadow: 0 4px 0 #b8860b; }
+.screen button:hover { background: #ffe27a; }
+.screen .controls { margin-top: 30px; font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.8; }
+.hidden { display: none !important; }

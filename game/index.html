@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOLMARA — Open World Crime</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": { "three": "./vendor/three.module.min.js" } }
+</script>
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="hud">
+  <div id="top-left">
+    <div id="money">$250</div>
+    <div id="debt">Debt: $8,000</div>
+    <div id="health-bar"><div id="health-fill"></div></div>
+  </div>
+  <div id="top-right">
+    <div id="stars">☆☆☆☆☆</div>
+    <div id="district">Neon Mile</div>
+  </div>
+  <div id="bottom-left">
+    <div id="speed">On foot</div>
+    <div id="objective">Find Vera Solano in Neon Mile (gold marker).</div>
+    <div id="timer"></div>
+  </div>
+  <canvas id="minimap" width="200" height="200"></canvas>
+  <div id="toast" class="hidden"></div>
+</div>
+
+<div id="title-screen" class="screen">
+  <h1>SOLMARA</h1>
+  <p class="tagline">An open-world crime story</p>
+  <p class="story">Kai Mercer owes fixer Vera Solano $8,000.<br>Three jobs. One city. No way out but through.</p>
+  <button id="start-btn">New Game</button>
+  <button id="continue-btn" class="hidden">Continue</button>
+  <p class="controls">WASD move &nbsp;·&nbsp; Shift run &nbsp;·&nbsp; Space jump &nbsp;·&nbsp; E enter car / talk &nbsp;·&nbsp; F punch<br>Mouse drag orbits the camera &nbsp;·&nbsp; P pause &nbsp;·&nbsp; L save &nbsp;·&nbsp; M mute</p>
+</div>
+
+<div id="pause-screen" class="screen hidden">
+  <h1>PAUSED</h1>
+  <p class="story">Solmara waits for no one. Except now.</p>
+  <button id="resume-btn">Resume</button>
+  <button id="quit-btn">Quit to Title</button>
+</div>
+
+<div id="end-screen" class="screen hidden">
+  <h1 id="end-title">BUSTED</h1>
+  <p class="story" id="end-text"></p>
+  <button id="restart-btn">Play Again</button>
+</div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
